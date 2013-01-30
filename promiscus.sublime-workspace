@@ -1,0 +1,326 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mo",
+				"mod	module .. end"
+			],
+			[
+				"cla",
+				"cla	class .. end"
+			],
+			[
+				"part",
+				"part"
+			],
+			[
+				"Defindex",
+				"Defindex"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "main.lua",
+			"settings":
+			{
+				"buffer_size": 76,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/alpha/AppData/Roaming/Sublime Text 2/Packages/User/Love.sublime-build",
+			"settings":
+			{
+				"buffer_size": 79,
+				"line_ending": "Windows",
+				"name": "untitled.sublime-build"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 160.0,
+		"selected_items":
+		[
+			[
+				"lua",
+				"Set Syntax: Lua"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Preferences: Package Control Settings – Default"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"markdown",
+				"Set Syntax: Markdown"
+			],
+			[
+				"yaml",
+				"Set Syntax: YAML"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"snippet",
+				"Snippet: Class"
+			],
+			[
+				"xml",
+				"Set Syntax: XML"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"javascript",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"ruby",
+				"Set Syntax: Ruby"
+			]
+		],
+		"width": 386.0
+	},
+	"console":
+	{
+		"height": 132.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/alpha/Documents/inventory.js",
+		"/C/Users/alpha/Documents/trading.json",
+		"/C/Users/alpha/Documents/GitHub/redjazz96/SteamBot/Bin/Debug/settings.json",
+		"/C/Users/alpha/Documents/steam_trading.js",
+		"/C/Users/alpha/Documents/steam_trading2.js",
+		"/C/Users/alpha/design/exchange/icon.c",
+		"/C/Users/alpha/Documents/GitHub/redjazz96/SteamBot/Bin/Debug/steambot.log",
+		"/C/Users/alpha/AppData/Roaming/Sublime Text 2/Packages/Package Control/Package Control.sublime-settings",
+		"/C/Users/alpha/AppData/Roaming/Sublime Text 2/Packages/User/Package Control.sublime-settings",
+		"/C/Users/alpha/Documents/GitHub/redjazz96/SteamBot/README.md",
+		"/C/Users/alpha/Documents/GitHub/SteamBot/CONTRIBUTING.md",
+		"/C/Users/alpha/Documents/GitHub/SteamBot/README.md",
+		"/C/Users/alpha/AppData/Local/Temp/Temp1_FortAwesome-Font-Awesome-v3.0.0-2-g16b6298.zip/FortAwesome-Font-Awesome-16b6298/css/font-awesome.css",
+		"/C/Users/alpha/laser/lib/laser_tag/battlefield.rb",
+		"/C/Users/alpha/AppData/Local/Temp/Temp1_FortAwesome-Font-Awesome-v3.0.0-2-g16b6298.zip/FortAwesome-Font-Awesome-16b6298/README.md",
+		"/C/Users/alpha/laser/lib/laser_tag/battlefield/config.rb",
+		"/C/Users/alpha/plus/lib/plus/plugins/loader.php",
+		"/C/Users/alpha/plus/lib/plus/plugin.php",
+		"/C/Users/alpha/plus/lib/plus/base.php",
+		"/C/Users/alpha/plus/lib/plus.php",
+		"/C/Users/alpha/plus/lib/plus/plugins/test.php",
+		"/C/Users/alpha/plus/test/run.php",
+		"/C/Users/alpha/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/Users/alpha/plus/lib/plus/plugin/loader.php",
+		"/C/Users/alpha/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/alpha/plus/test/helper.php",
+		"/C/Users/alpha/bobject.js",
+		"/C/Users/alpha/Dropbox/Public/s/d/f/o/dashboard_files/style.css",
+		"/C/Users/alpha/AppData/Local/Temp/Temp1_autosize.zip/autosize/readme.md",
+		"/C/Users/alpha/design/bbjs/jquery.js",
+		"/C/Users/alpha/Dropbox/Public/s/d/f/o/dashboard_files/grapher.js",
+		"/C/Users/alpha/test.html",
+		"/C/Users/alpha/source.rb",
+		"/C/Users/alpha/Downloads/jquery-require-sample/jquery-require-sample/webapp-build/scripts/app.build.js",
+		"/C/Users/alpha/Downloads/jquery-require-sample/jquery-require-sample/webapp-build/scripts/jquery.beta.js",
+		"/C/Users/alpha/Downloads/jquery-require-sample/jquery-require-sample/webapp-build/scripts/require-jquery.js"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"confirm",
+			"rgContext",
+			"assetid",
+			"rgItem",
+			"rgInventory",
+			"Template",
+			"Templace",
+			"UpdateEventLog",
+			"currency",
+			"logpos",
+			"channel",
+			"event.action",
+			"RefreshTradeStatus",
+			"StatusUpdate",
+			"contextid",
+			"save_on"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "main.lua",
+					"settings":
+					{
+						"buffer_size": 76,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								71,
+								71
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Users/alpha/AppData/Roaming/Sublime Text 2/Packages/User/Love.sublime-build",
+					"settings":
+					{
+						"buffer_size": 79,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								74,
+								74
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 37.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 177.0,
+	"status_bar_visible": true
+}
