@@ -2,6 +2,7 @@ state = {}
 state.currentState = 0
 
 require "title"
+require "world"
 
 function state.change(newState)
   print(string.format("state changed to %i", newState))
@@ -25,8 +26,8 @@ function state.change(newState)
     state.mouseUp     = title.save.mouseUp
   elseif state.currentState == 2 then
     state.update  = state.nothing
-    state.draw    = state.nothing
-    state.keyDown = state.nothing
+    state.draw    = world.game.draw
+    state.keyDown = world.game.keyDown
     state.keyUp   = state.nothing
 
     state.mouseDown = state.nothing

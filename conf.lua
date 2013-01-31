@@ -2,7 +2,7 @@ function love.conf(t)
   t.title = "Promiscus"
   t.author = "Jeremy Rodi"
   t.url = nil                 -- no website :(
-  t.identity = "save"
+  t.identity = "promiscus"
   t.version = "0.8.0"
   t.console = true
   t.release = false
