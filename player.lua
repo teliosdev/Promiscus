@@ -14,7 +14,7 @@ Player = {
 }
 
 function Player:new(o)
-  o = o or {}
+  local o = o or {}
 
   setmetatable(o, { __index=self })
   setmetatable(o.stats, { __index=self.stats })

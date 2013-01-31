@@ -1,0 +1,1 @@
+States.Fight = State:new()

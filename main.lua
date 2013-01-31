@@ -1,14 +1,16 @@
 require "state"
+require "player"
+require "save"
 
 font = {}
 
 function love.update()
   -- game data goes here
-  state.update()
+  State.update()
 end
 
 function love.draw()
-  state.draw()
+  State.draw()
   love.graphics.print(string.format("frametime: %f, fps: %i", love.timer.getDelta(), love.timer.getFPS()), 0, 0)
 end
 
@@ -17,7 +19,7 @@ function love.load()
   font.default = love.graphics.newFont(12)
   font.medium  = love.graphics.newFont(18)
   font.large   = love.graphics.newFont(24)
-  love.mouse.setVisible(false)
+  --love.mouse.setVisible(false)
 end
 
 -- he wouldn't ever leave us, would he? :(
@@ -26,23 +28,23 @@ function love.focus(f)
 end
 
 function love.keypressed(char, unicode)
-    state.keyDown(char, unicode)
+    State.keyDown(char, unicode)
 end
 
 function love.keyreleased(char, unicode)
+  State.keyUp(char, unicode)
+  
   if key == "escape" then
-    love.event.push("quit")   -- actually causes the app to quit
-  else
-    state.keyUp(char, unicode)
+    love.event.push("q")   -- actually causes the app to quit
   end
 end
 
 function love.mousepressed(x, y, button)
-  state.mouseDown(x, y, button)
+  State.mouseDown(x, y, button)
 end
 
 function love.mousereleased(x, y, button)
-  state.mouseUp(x, y, button)
+  State.mouseUp(x, y, button)
 end
 
 function love.quit()

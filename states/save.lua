@@ -1,40 +1,11 @@
-title = { main={}, save={}, new={} }
+local Save  = State:new()
+States.Save = Save
 
-
-state:addState(0, title.main)
-state:addState(1, title.save)
-state:addState(2, title.new )
-
-require "menu"
-
-function title.main.draw()
-  love.graphics.setFont(font.large)
-  love.graphics.print("Promiscus", 325, 100)
-  love.graphics.setFont(font.default)
-end
-
-
-function title.main.nextState(...)
-  state:change(1)
-end
-
-setmetatable(title.main, { 
-  __index=function(t, key)
-    print(t)
-    print(key)
-    if key == 'draw' then
-      return t.draw
-    elseif key == 'nextState' then
-      return t.nextState
-    elseif key == 'mouseUp' or key == 'keyUp' then
-      return t.nextState
-    end
-  end })
-
-function title.save.draw()
+function Save.draw()
   love.graphics.setFont(font.large)
   love.graphics.print("Promiscus", 325, 50)
   love.graphics.setFont(font.default)
+  --title.save.menu:draw(love)
   --love.graphics.setColor(10, 10, 245)
   --love.graphics.rectangle("fill", 240, 150, 300, 50)
   --love.graphics.rectangle("fill", 240, 210, 300, 50)
@@ -46,7 +17,7 @@ end
 
 -- we use mouse up so we don't accidentally fire a "mouseDown" event in another
 -- state.
-function title.save.mouseUp(x, y, button)
+function Save.mouseUp(x, y, button)
   if button == 'l' and 240 < x and x < (240 + 300) then
     if 150 < y and y < (150 + 50) then
       world.save = Save:new({ player = Player:new() })

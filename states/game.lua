@@ -1,14 +1,7 @@
-world = { save={}, game={}, fight={} }
+local Game = State:new()
+States.Game = Game
 
-require "save"
-require "player"
-
-currentPlayer = {}
-
-state:addState(3, world.game)
-state:addState(4, world.fight)
-
-function world.game.draw()
+function Game.draw()
   love.graphics.printf(
     string.format([[
       Modifiers:
@@ -30,7 +23,7 @@ function world.game.draw()
 
 end
 
-function world.game.keyDown(char)
+function Game.keyDown(char)
   if char == 's' then
     Save.toFile("main", world.save)
   end

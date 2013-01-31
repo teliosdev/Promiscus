@@ -1,34 +1,32 @@
-state = { states={} }
-state.currentState = 0
+State, States = { currentState={} }, {}
 
--- the requires are down below, so that state:addState could be called
-
-function state:change(newState)
-  print(string.format("state changed to %i", newState))
-  state.currentState = newState
-
-  stateCallback = self.states[newState]
-
-  if stateCallback then
-    state.update  = stateCallback.update  or state.nothing
-    state.draw    = stateCallback.draw    or state.nothing
-    state.keyDown = stateCallback.keyDown or state.nothing
-    state.keyUp   = stateCallback.keyUp   or state.nothing
-
-    state.mouseDown = stateCallback.mouseDown or state.nothing
-    state.mouseUp   = stateCallback.mouseUp   or state.nothing
+setmetatable(State, {
+  __index = function(t, key)
+    if t.currentState[key] then
+      return t.currentState[key]
+    else
+      return State.nothing
+    end
   end
+})
+
+function State:changeState(newState)
+  self.currentState = newState
 end
 
-function state:addState(number, callbacks)
-  self.states[number] = callbacks
+function State.nothing(...)
+  -- do nothing :(
 end
 
-function state.nothing(...)
-
+function State:new()
+  local o = { name="anon" }
+  return o
 end
 
-require "title"
-require "world"
+for i, file in ipairs(love.filesystem.enumerate("states")) do
+  pcall(love.filesystem.load("states/" .. file))
+end
 
-state:change(0)
+State:changeState(States.Title)
+
+print(State.currentState.name)

@@ -1,0 +1,1 @@
+States.New = State:new()
