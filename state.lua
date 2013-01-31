@@ -1,79 +1,34 @@
-state = {}
+state = { states={} }
 state.currentState = 0
 
-require "title"
-require "world"
+-- the requires are down below, so that state:addState could be called
 
-function state.change(newState)
+function state:change(newState)
   print(string.format("state changed to %i", newState))
   state.currentState = newState
 
-  if state.currentState == 0 then
-    state.update  = state.nothing
-    state.draw    = title.main.draw
-    state.keyDown = state.nothing
-    state.keyUp   = state.nothing
+  stateCallback = self.states[newState]
 
-    state.mouseDown = state.nothing
-    state.mouseUp   = title.main.nextState
-  elseif state.currentState == 1 then
-    state.update  = state.nothing
-    state.draw    = title.save.draw
-    state.keyDown = state.nothing
-    state.keyUp   = state.nothing
+  if stateCallback then
+    state.update  = stateCallback.update  or state.nothing
+    state.draw    = stateCallback.draw    or state.nothing
+    state.keyDown = stateCallback.keyDown or state.nothing
+    state.keyUp   = stateCallback.keyUp   or state.nothing
 
-    state.mouseDown   = state.nothing
-    state.mouseUp     = title.save.mouseUp
-  elseif state.currentState == 2 then
-    state.update  = state.nothing
-    state.draw    = world.game.draw
-    state.keyDown = world.game.keyDown
-    state.keyUp   = state.nothing
-
-    state.mouseDown = state.nothing
-    state.mouseUp   = state.nothing
-  elseif state.currentState == 3 then
-    state.update  = state.nothing
-    state.draw    = state.nothing
-    state.keyDown = state.nothing
-    state.keyUp   = state.nothing
-
-    state.mouseDown = state.nothing
-    state.mouseUp   = state.nothing
+    state.mouseDown = stateCallback.mouseDown or state.nothing
+    state.mouseUp   = stateCallback.mouseUp   or state.nothing
   end
+end
+
+function state:addState(number, callbacks)
+  self.states[number] = callbacks
 end
 
 function state.nothing(...)
 
 end
 
-state.change(0)
+require "title"
+require "world"
 
---function state.update()
---  if state.currentState == 0 then
---    title.mainUpdate()
---  elseif state.currentState == 1 then
---    title.saveUpdate()
---  elseif state.currentState == 2 then
---    -- do something
---  elseif state.currentState == 3 then
---    -- do something else
---  end
---end
-
---function state.draw()
---  if state.currentState == 0 then
---    title.mainDraw()
---  elseif state.currentState == 1 then
---    title.saveDraw()
---  elseif state.currentState == 2 then
---    -- do something
---  elseif state.currentState == 3 then
---    -- do something else
---  end
---end
-
-state.titleScreen = 0
-state.saveScreen = 1
-state.inGame = 2
-state.inFight = 3
+state:change(0)

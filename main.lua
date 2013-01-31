@@ -15,8 +15,9 @@ end
 function love.load()
   gameHasFocus = true
   font.default = love.graphics.newFont(12)
-  font.medium = love.graphics.newFont(18)
-  font.large = love.graphics.newFont(24)
+  font.medium  = love.graphics.newFont(18)
+  font.large   = love.graphics.newFont(24)
+  love.mouse.setVisible(false)
 end
 
 -- he wouldn't ever leave us, would he? :(
