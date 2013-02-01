@@ -52,9 +52,20 @@ end
 
 ]]--
 
-local Button
+local Button = {
+  selected = false,
+  color    = {r=0, g=0, b=255, a=1},
+  text     = nil,
+  selectedColor = {r=0, g=255, b=0, a=1}
+}
 Menu.Button = Button
 
 function Button:new(o)
-  
+  o = o or {}
+  setmetatable(o, { __index=self })
+  return o
+end
+
+function Button:draw(love)
+
 end

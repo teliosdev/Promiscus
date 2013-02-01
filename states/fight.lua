@@ -1,1 +1,1 @@
-States.Fight = State:new()
+States.Fight = State:new("Fight")

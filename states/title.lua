@@ -1,4 +1,4 @@
-local Title = State:new()
+local Title = State:new("Title")
 States.Title = Title
 
 function Title.draw()
@@ -9,5 +9,6 @@ function Title.draw()
 end
 
 function Title.keyUp()
+  print("changing state", States.Save)
 	State:changeState(States.Save)
 end

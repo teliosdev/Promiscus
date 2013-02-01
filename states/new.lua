@@ -1,1 +1,1 @@
-States.New = State:new()
+States.New = State:new("New Game")

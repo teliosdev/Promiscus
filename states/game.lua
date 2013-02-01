@@ -1,4 +1,4 @@
-local Game = State:new()
+local Game = State:new("Game")
 States.Game = Game
 
 function Game.draw()

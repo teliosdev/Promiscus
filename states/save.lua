@@ -1,23 +1,20 @@
-local Save  = State:new()
-States.Save = Save
+States.Save = State:new("Save") -- Save is already defined, so...
+local saveMenu
+require "menu"
 
-function Save.draw()
-  love.graphics.setFont(font.large)
-  love.graphics.print("Promiscus", 325, 50)
-  love.graphics.setFont(font.default)
-  --title.save.menu:draw(love)
-  --love.graphics.setColor(10, 10, 245)
-  --love.graphics.rectangle("fill", 240, 150, 300, 50)
-  --love.graphics.rectangle("fill", 240, 210, 300, 50)
-  --love.graphics.setColor(255, 255, 255)
-  --love.graphics.setFont(font.medium)
-  --love.graphics.print("play", 370, 165, 0)
-  --love.graphics.print("load", 370, 225, 0)
+saveMenu = Menu:new(function(menu)
+  menu:addElement("title", Menu.Title:new{
+    text = "Promiscus"
+  })
+end)
+
+function States.Save.draw()
+  saveMenu:draw(love, { topY = 10, topX = (800 - 400)/2, sizeX = 400 })
 end
 
 -- we use mouse up so we don't accidentally fire a "mouseDown" event in another
 -- state.
-function Save.mouseUp(x, y, button)
+function States.Save.mouseUp(x, y, button)
   if button == 'l' and 240 < x and x < (240 + 300) then
     if 150 < y and y < (150 + 50) then
       world.save = Save:new({ player = Player:new() })
@@ -30,3 +27,5 @@ function Save.mouseUp(x, y, button)
     end
   end
 end
+
+print("SAVE REQUIRED")

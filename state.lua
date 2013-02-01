@@ -11,20 +11,22 @@ setmetatable(State, {
 })
 
 function State:changeState(newState)
-  self.currentState = newState
+  print("Chaing state to", newState.name)
+  State.currentState = newState
 end
 
 function State.nothing(...)
-  -- do nothing :(
+  -- do nothing :Cm
 end
 
-function State:new()
-  local o = { name="anon" }
+function State:new(name)
+  local o = { ["name"]= (name or "anon") }
   return o
 end
 
 for i, file in ipairs(love.filesystem.enumerate("states")) do
-  pcall(love.filesystem.load("states/" .. file))
+  print("loading file " .. file)
+  love.filesystem.load("states/" .. file)()
 end
 
 State:changeState(States.Title)

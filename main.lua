@@ -6,11 +6,11 @@ font = {}
 
 function love.update()
   -- game data goes here
-  State.update()
+  State.update(gameHasFocus)
 end
 
 function love.draw()
-  State.draw()
+  State.draw(gameHasFocus)
   love.graphics.print(string.format("frametime: %f, fps: %i", love.timer.getDelta(), love.timer.getFPS()), 0, 0)
 end
 
